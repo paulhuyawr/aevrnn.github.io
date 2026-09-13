@@ -1109,6 +1109,46 @@
 
   <script src="script.js"></script>
 
+
+<script>
+(() => {
+  const audio = document.getElementById("aevrnn-music");
+  if (!audio) {
+    console.warn("AEVRNN: music element not found");
+    return;
+  }
+
+  audio.loop = true;
+  audio.preload = "auto";
+  audio.volume = 0.85;
+
+  const startMusic = () => {
+    audio.muted = false;
+    audio.play().then(() => {
+      console.log("AEVRNN: Attention.mp3 started");
+    }).catch(err => {
+      console.warn("AEVRNN: music play blocked:", err);
+    });
+  };
+
+  document.addEventListener("click", (e) => {
+    const el = e.target.closest("button, a, [role='button'], .tap-to-enter, .enter-button");
+    if (!el) return;
+
+    const text = (el.textContent || "").trim().toLowerCase();
+
+    if (
+      text.includes("tap to enter") ||
+      text.includes("enter") ||
+      el.classList.contains("tap-to-enter") ||
+      el.classList.contains("enter-button")
+    ) {
+      startMusic();
+    }
+  }, true);
+})();
+</script>
+
 </body>
 </html>
 
