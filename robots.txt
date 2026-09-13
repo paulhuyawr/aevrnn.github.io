@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aevrnn.surge.sh/sitemap.xml
