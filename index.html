@@ -27,7 +27,7 @@
   background:#030006;
   color:#fff;
   font-family:Inter,system-ui,sans-serif;
-  transition:opacity 1.2s cubic-bezier(.77,0,.18,1),transform 1.2s cubic-bezier(.77,0,.18,1);
+  transition:opacity 1.2s cubic-bezier(.77,0,.18,1),transform 1.2s cubic-bezier(.77,0,.18,1);background-color:#030006;
 }
 #aevrnn-cinematic-intro.hide{
   opacity:0;
@@ -118,16 +118,8 @@
   opacity:.2;
   animation:aevrnnLine 5s linear infinite;
 }
-.aevrnn-flash{display:none!important;
-  position:absolute;
-  inset:0;
-  background:#fff;
-  opacity:0;
-  pointer-events:none;
-}
-#aevrnn-cinematic-intro.entering .aevrnn-flash{display:none!important;display:none!important;
-  animation:aevrnnFlash .8s ease forwards;
-}
+
+
 @keyframes aevrnnFloat{
   from{transform:translate3d(-2%,-2%,0) scale(1)}
   to{transform:translate3d(2%,2%,0) scale(1.08)}
@@ -170,8 +162,6 @@
     <div class="aevrnn-sub">CREATIVE DEVELOPER • DESIGNER</div>
     <button id="aevrnn-enter">TAP TO ENTER</button>
   </div>
-
-  <div class="aevrnn-flash"></div>
 </div>
 
 <audio id="aevrnn-music" src="./public/Attention.mp3" loop preload="auto"></audio>
@@ -1120,7 +1110,7 @@
 
   audio.loop = true;
   audio.preload = "auto";
-  audio.volume = 0.5;
+  audio.volume = 0.3;
 
   const startMusic = () => {
     audio.muted = false;
