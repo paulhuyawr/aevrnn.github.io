@@ -118,14 +118,14 @@
   opacity:.2;
   animation:aevrnnLine 5s linear infinite;
 }
-.aevrnn-flash{
+.aevrnn-flash{display:none!important;
   position:absolute;
   inset:0;
   background:#fff;
   opacity:0;
   pointer-events:none;
 }
-#aevrnn-cinematic-intro.entering .aevrnn-flash{
+#aevrnn-cinematic-intro.entering .aevrnn-flash{display:none!important;display:none!important;
   animation:aevrnnFlash .8s ease forwards;
 }
 @keyframes aevrnnFloat{
@@ -189,7 +189,7 @@
 
       let v=0;
       const fade=setInterval(()=>{
-        v=Math.min(1,v+.05);
+        v=Math.min(0.5,v+.05);
         music.volume=v;
         if(v>=1) clearInterval(fade);
       },35);
@@ -1120,7 +1120,7 @@
 
   audio.loop = true;
   audio.preload = "auto";
-  audio.volume = 0.85;
+  audio.volume = 0.5;
 
   const startMusic = () => {
     audio.muted = false;
