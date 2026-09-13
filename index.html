@@ -1,1147 +1,1147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050507">
-  <meta name="description" content="AEVRNN, Minecraft & Discord Developer, Video Editor and Creator.">
-  <title>AEVRNN, Digital Craft</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="theme-color" content="#050507">
+ <meta name="description" content="AEVRNN, Minecraft & Discord Developer, Video Editor and Creator.">
+ <title>AEVRNN, Digital Craft</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-    <title>AEVRNN — Creative Developer & Designer</title>
-    <meta name="description" content="AEVRNN — Creative developer and designer building futuristic digital experiences, websites and projects.">
-    <meta name="keywords" content="AEVRNN, AEVRNN portfolio, Auritra Paul, developer, designer, web developer">
-    <meta name="author" content="AEVRNN">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://aevrnn.surge.sh/">
+ <link rel="stylesheet" href="style.css">
+  <title>AEVRNN Creative Developer & Designer</title>
+  <meta name="description" content="AEVRNN Creative developer and designer building futuristic digital experiences, websites and projects.">
+  <meta name="keywords" content="AEVRNN, AEVRNN portfolio, Auritra Paul, developer, designer, web developer">
+  <meta name="author" content="AEVRNN">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aevrnn.surge.sh/">
 </head>
 
 <body>
 <style>
 #aevrnn-cinematic-intro{
-  position:fixed;
-  inset:0;
-  z-index:999999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background:#030006;
-  color:#fff;
-  font-family:Inter,system-ui,sans-serif;
-  transition:opacity 1.2s cubic-bezier(.77,0,.18,1),transform 1.2s cubic-bezier(.77,0,.18,1);background-color:#030006;
+ position:fixed;
+ inset:0;
+ z-index:999999;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ overflow:hidden;
+ background:#030006;
+ color:#fff;
+ font-family:Inter,system-ui,sans-serif;
+ transition:opacity 1.2s cubic-bezier(.77,0,.18,1),transform 1.2s cubic-bezier(.77,0,.18,1);background-color:#030006;
 }
 #aevrnn-cinematic-intro.hide{
-  opacity:0;
-  transform:scale(1.08);
-  pointer-events:none;
+ opacity:0;
+ transform:scale(1.08);
+ pointer-events:none;
 }
 .aevrnn-bg{
-  position:absolute;
-  inset:-20%;
-  background:
-    radial-gradient(circle at 50% 45%,rgba(168,0,255,.25),transparent 25%),
-    radial-gradient(circle at 20% 80%,rgba(255,80,180,.12),transparent 30%),
-    radial-gradient(circle at 80% 20%,rgba(90,0,255,.13),transparent 30%);
-  filter:blur(35px);
-  animation:aevrnnFloat 7s ease-in-out infinite alternate;
+ position:absolute;
+ inset:-20%;
+ background:
+  radial-gradient(circle at 50% 45%,rgba(168,0,255,.25),transparent 25%),
+  radial-gradient(circle at 20% 80%,rgba(255,80,180,.12),transparent 30%),
+  radial-gradient(circle at 80% 20%,rgba(90,0,255,.13),transparent 30%);
+ filter:blur(35px);
+ animation:aevrnnFloat 7s ease-in-out infinite alternate;
 }
 .aevrnn-grid{
-  position:absolute;
-  inset:0;
-  opacity:.12;
-  background-image:
-    linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);
-  background-size:55px 55px;
-  mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);
-  animation:aevrnnGrid 12s linear infinite;
+ position:absolute;
+ inset:0;
+ opacity:.12;
+ background-image:
+  linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);
+ background-size:55px 55px;
+ mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);
+ animation:aevrnnGrid 12s linear infinite;
 }
 .aevrnn-content{
-  position:relative;
-  z-index:3;
-  text-align:center;
+ position:relative;
+ z-index:3;
+ text-align:center;
 }
 .aevrnn-small{
-  font-size:11px;
-  letter-spacing:7px;
-  text-transform:uppercase;
-  opacity:.55;
-  margin-bottom:22px;
+ font-size:11px;
+ letter-spacing:7px;
+ text-transform:uppercase;
+ opacity:.55;
+ margin-bottom:22px;
 }
 .aevrnn-title{
-  margin:0;
-  font-size:clamp(58px,15vw,150px);
-  font-weight:900;
-  letter-spacing:-7px;
-  line-height:.85;
-  background:linear-gradient(110deg,#fff,#d7a5ff 45%,#ff7399);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  text-shadow:0 0 50px rgba(190,0,255,.25);
-  animation:aevrnnTitle 2.5s cubic-bezier(.2,.8,.2,1) both;
+ margin:0;
+ font-size:clamp(58px,15vw,150px);
+ font-weight:900;
+ letter-spacing:-7px;
+ line-height:.85;
+ background:linear-gradient(110deg,#fff,#d7a5ff 45%,#ff7399);
+ -webkit-background-clip:text;
+ background-clip:text;
+ color:transparent;
+ text-shadow:0 0 50px rgba(190,0,255,.25);
+ animation:aevrnnTitle 2.5s cubic-bezier(.2,.8,.2,1) both;
 }
 .aevrnn-sub{
-  margin-top:25px;
-  font-size:13px;
-  letter-spacing:5px;
-  text-transform:uppercase;
-  opacity:.45;
+ margin-top:25px;
+ font-size:13px;
+ letter-spacing:5px;
+ text-transform:uppercase;
+ opacity:.45;
 }
 #aevrnn-enter{
-  margin-top:42px;
-  padding:15px 34px;
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:999px;
-  background:rgba(255,255,255,.045);
-  color:#fff;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:4px;
-  cursor:pointer;
-  backdrop-filter:blur(15px);
-  box-shadow:0 0 0 rgba(190,0,255,0);
-  transition:.35s ease;
-  animation:aevrnnButton 2s ease-in-out infinite;
+ margin-top:42px;
+ padding:15px 34px;
+ border:1px solid rgba(255,255,255,.28);
+ border-radius:999px;
+ background:rgba(255,255,255,.045);
+ color:#fff;
+ font-size:12px;
+ font-weight:700;
+ letter-spacing:4px;
+ cursor:pointer;
+ backdrop-filter:blur(15px);
+ box-shadow:0 0 0 rgba(190,0,255,0);
+ transition:.35s ease;
+ animation:aevrnnButton 2s ease-in-out infinite;
 }
 #aevrnn-enter:hover{
-  transform:translateY(-3px) scale(1.04);
-  border-color:rgba(255,255,255,.7);
-  box-shadow:0 0 45px rgba(190,0,255,.4);
-  background:rgba(255,255,255,.09);
+ transform:translateY(-3px) scale(1.04);
+ border-color:rgba(255,255,255,.7);
+ box-shadow:0 0 45px rgba(190,0,255,.4);
+ background:rgba(255,255,255,.09);
 }
 .aevrnn-line{
-  position:absolute;
-  width:140vw;
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
-  transform:rotate(-18deg);
-  opacity:.2;
-  animation:aevrnnLine 5s linear infinite;
+ position:absolute;
+ width:140vw;
+ height:1px;
+ background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
+ transform:rotate(-18deg);
+ opacity:.2;
+ animation:aevrnnLine 5s linear infinite;
 }
 
 
 @keyframes aevrnnFloat{
-  from{transform:translate3d(-2%,-2%,0) scale(1)}
-  to{transform:translate3d(2%,2%,0) scale(1.08)}
+ from{transform:translate3d(-2%,-2%,0) scale(1)}
+ to{transform:translate3d(2%,2%,0) scale(1.08)}
 }
 @keyframes aevrnnGrid{
-  from{transform:translateY(0)}
-  to{transform:translateY(55px)}
+ from{transform:translateY(0)}
+ to{transform:translateY(55px)}
 }
 @keyframes aevrnnTitle{
-  from{opacity:0;transform:translateY(35px) scale(.92);filter:blur(15px)}
-  to{opacity:1;transform:none;filter:blur(0)}
+ from{opacity:0;transform:translateY(35px) scale(.92);filter:blur(15px)}
+ to{opacity:1;transform:none;filter:blur(0)}
 }
 @keyframes aevrnnButton{
-  0%,100%{box-shadow:0 0 0 rgba(190,0,255,0)}
-  50%{box-shadow:0 0 28px rgba(190,0,255,.18)}
+ 0%,100%{box-shadow:0 0 0 rgba(190,0,255,0)}
+ 50%{box-shadow:0 0 28px rgba(190,0,255,.18)}
 }
 @keyframes aevrnnLine{
-  from{left:-80%;top:20%}
-  to{left:100%;top:80%}
+ from{left:-80%;top:20%}
+ to{left:100%;top:80%}
 }
 @keyframes aevrnnFlash{
-  0%{opacity:0}
-  35%{opacity:.8}
-  100%{opacity:0}
+ 0%{opacity:0}
+ 35%{opacity:.8}
+ 100%{opacity:0}
 }
 @media(max-width:600px){
-  .aevrnn-title{letter-spacing:-4px}
-  .aevrnn-small{letter-spacing:4px}
+ .aevrnn-title{letter-spacing:-4px}
+ .aevrnn-small{letter-spacing:4px}
 }
 </style>
 
 <div id="aevrnn-cinematic-intro">
-  <div class="aevrnn-bg"></div>
-  <div class="aevrnn-grid"></div>
-  <div class="aevrnn-line"></div>
+ <div class="aevrnn-bg"></div>
+ <div class="aevrnn-grid"></div>
+ <div class="aevrnn-line"></div>
 
-  <div class="aevrnn-content">
-    <div class="aevrnn-small">WELCOME TO</div>
-    <h1 class="aevrnn-title">AEVRNN</h1>
-    <div class="aevrnn-sub">CREATIVE DEVELOPER • DESIGNER</div>
-    <button id="aevrnn-enter">TAP TO ENTER</button>
-  </div>
+ <div class="aevrnn-content">
+  <div class="aevrnn-small">WELCOME TO</div>
+  <h1 class="aevrnn-title">AEVRNN</h1>
+  <div class="aevrnn-sub">CREATIVE DEVELOPER • DESIGNER</div>
+  <button id="aevrnn-enter">TAP TO ENTER</button>
+ </div>
 </div>
 
 <audio id="aevrnn-music" src="./public/Attention.mp3" loop preload="auto"></audio>
 
 <script>
 (function(){
-  const intro=document.getElementById("aevrnn-cinematic-intro");
-  const btn=document.getElementById("aevrnn-enter");
-  const music=document.getElementById("aevrnn-music");
+ const intro=document.getElementById("aevrnn-cinematic-intro");
+ const btn=document.getElementById("aevrnn-enter");
+ const music=document.getElementById("aevrnn-music");
 
-  btn.addEventListener("click",async()=>{
-    try{
-      music.volume=0;
-      await music.play();
+ btn.addEventListener("click",async()=>{
+  try{
+   music.volume=0;
+   await music.play();
 
-      let v=0;
-      const fade=setInterval(()=>{
-        v=Math.min(0.5,v+.05);
-        music.volume=v;
-        if(v>=1) clearInterval(fade);
-      },35);
-    }catch(e){}
+   let v=0;
+   const fade=setInterval(()=>{
+    v=Math.min(0.5,v+.05);
+    music.volume=v;
+    if(v>=1) clearInterval(fade);
+   },35);
+  }catch(e){}
 
-    intro.classList.add("entering");
+  intro.classList.add("entering");
 
-    setTimeout(()=>{
-      intro.classList.add("hide");
-      document.body.style.overflow="";
-      setTimeout(()=>intro.remove(),350);
-    },500);
-  });
+  setTimeout(()=>{
+   intro.classList.add("hide");
+   document.body.style.overflow="";
+   setTimeout(()=>intro.remove(),350);
+  },500);
+ });
 
-  document.body.style.overflow="hidden";
+ document.body.style.overflow="hidden";
 })();
 </script>
 
 
-  <!-- INTRO -->
-  <div class="intro" id="intro">
-    <div class="intro-noise"></div>
+ <!-- INTRO -->
+ <div class="intro" id="intro">
+  <div class="intro-noise"></div>
 
-    <div class="intro-content">
-      <div class="intro-line"></div>
+  <div class="intro-content">
+   <div class="intro-line"></div>
 
-      <div class="intro-brand">
-        <span>AEVRNN</span>
-      </div>
+   <div class="intro-brand">
+    <span>AEVRNN</span>
+   </div>
 
-      <div class="intro-sub">DIGITAL CRAFT</div>
+   <div class="intro-sub">DIGITAL CRAFT</div>
 
-      <div class="intro-loading">
-        <span></span>
-      </div>
-    </div>
+   <div class="intro-loading">
+    <span></span>
+   </div>
+  </div>
+ </div>
+
+ <!-- BACKGROUND -->
+ <div class="ambient ambient-1"></div>
+ <div class="ambient ambient-2"></div>
+ <div class="ambient ambient-3"></div>
+
+ <div class="grid-bg"></div>
+ <div class="particles" id="particles"></div>
+ <div class="mouse-glow"></div>
+
+ <div class="progress-bar" id="progress"></div>
+
+ <!-- NAV -->
+ <nav id="navbar">
+  <a href="#home" class="logo">
+   <span>AEVRNN</span>
+   <small>DIGITAL CRAFT</small>
+  </a>
+
+  <div class="nav-links">
+   <a href="#work">Minecraft</a>
+   <a href="#discord">Discord</a>
+   <a href="#editing">Editing</a>
+   <a href="#website-development">Website</a>
+    <a href="#contact">Contact</a>
   </div>
 
-  <!-- BACKGROUND -->
-  <div class="ambient ambient-1"></div>
-  <div class="ambient ambient-2"></div>
-  <div class="ambient ambient-3"></div>
+  <div class="nav-status">
+   <span></span>
+   AVAILABLE
+  </div>
+ </nav>
 
-  <div class="grid-bg"></div>
-  <div class="particles" id="particles"></div>
-  <div class="mouse-glow"></div>
+ <main>
 
-  <div class="progress-bar" id="progress"></div>
+  <!-- HERO -->
+  <section class="hero" id="home">
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <a href="#home" class="logo">
-      <span>AEVRNN</span>
-      <small>DIGITAL CRAFT</small>
+   <div class="hero-orbit orbit-1"></div>
+   <div class="hero-orbit orbit-2"></div>
+
+   <div class="hero-content">
+
+    <div class="hero-badge">
+     <span class="badge-dot"></span>
+     DEVELOPER • EDITOR • CREATOR
+    </div>
+
+    <div class="hero-title-wrap">
+     <div class="hero-mini">I BUILD DIGITAL EXPERIENCES</div>
+
+     <h1>
+      Building
+      <span class="gradient-text">things</span>
+      <br>
+      that stand out.
+     </h1>
+    </div>
+
+    <p class="hero-description">
+     Minecraft systems, Discord servers, custom bots, plugins and
+     visual content, built with curiosity, creativity and constant experimentation.
+    </p>
+
+    <div class="hero-buttons">
+     <a href="#work" class="btn btn-primary magnetic">
+      <span>Explore my work</span>
+      <b>↗</b>
+     </a>
+
+     <a href="#contact" class="btn btn-secondary magnetic">
+      Let's talk
+     </a>
+    </div>
+
+    <div class="hero-meta">
+     <div>
+      <strong>03</strong>
+      <span>CRAFT AREAS</span>
+     </div>
+
+     <div>
+      <strong>∞</strong>
+      <span>IDEAS</span>
+     </div>
+
+     <div>
+      <strong>24/7</strong>
+      <span>BUILD MODE</span>
+     </div>
+    </div>
+
+   </div>
+
+   <div class="scroll-indicator">
+    <span>SCROLL TO EXPLORE</span>
+    <i></i>
+   </div>
+
+  </section>
+
+
+  <!-- MINECRAFT -->
+  <section id="work" class="section">
+
+   <div class="section-top reveal">
+    <div>
+     <div class="section-label">01 / MINECRAFT DEVELOPMENT</div>
+     <h2>Building Minecraft systems.</h2>
+    </div>
+
+    <div class="section-number">MINECRAFT_01</div>
+   </div>
+
+   <div class="projects">
+
+    <article class="project-card tilt reveal">
+     <div class="card-glow"></div>
+
+     <div class="card-top">
+      <span>01</span>
+      <a class="arrow project-link" href="https://zentramc.vercel.app" target="_blank" rel="noopener">↗</a>
+     </div>
+
+     <div class="project-icon">Z</div>
+
+     <div class="card-content">
+      <div class="tag">MINECRAFT SERVER DEVELOPMENT</div>
+      <h3>ZentraMC</h3>
+      <p>
+       My Minecraft network project, built and developed around
+       gameplay systems, server configuration, custom features and player experience.
+      </p>
+     </div>
+
+     <div class="card-footer">
+      <span>LIVE SERVER</span>
+      <span>2026</span>
+     </div>
+    </article>
+
+
+    <article class="project-card tilt reveal">
+     <div class="card-glow"></div>
+
+     <div class="card-top">
+      <span>02</span>
+      <span class="arrow">↗</span>
+     </div>
+
+     <div class="project-icon">Z</div>
+
+     <div class="card-content">
+      <div class="tag">PLUGIN DEVELOPMENT</div>
+      <h3>Zentraduels</h3>
+      <p>
+       A custom Minecraft PvP plugin project with queue systems,
+       kits, arenas, countdowns and match flow.
+      </p>
+     </div>
+
+     <div class="card-footer">
+      <span>PAPER</span>
+      <span>JAVA</span>
+     </div>
+    </article>
+
+
+    <article class="project-card tilt reveal">
+     <div class="card-glow"></div>
+
+     <div class="card-top">
+      <span>03</span>
+      <span class="arrow">↗</span>
+     </div>
+
+     <div class="project-icon">H</div>
+
+     <div class="card-content">
+      <div class="tag">PLUGIN DEVELOPMENT</div>
+      <h3>ZentraHolograms</h3>
+      <p>
+       A Minecraft hologram plugin project created for displaying
+       custom information and server content.
+      </p>
+     </div>
+
+     <div class="card-footer">
+      <span>PAPER</span>
+      <span>JAVA</span>
+     </div>
+    </article>
+
+   </div>
+
+   <div class="live-project reveal">
+    <span class="live-dot"></span>
+    <span>ZENTRAMC</span>
+    <span class="live-separator">/</span>
+    <span>LIVE SERVER</span>
+    <a href="https://zentramc.vercel.app" target="_blank" rel="noopener">OPEN SERVER ↗</a>
+   </div>
+
+   <!-- SERVER IP -->
+   <div class="server-ip-card reveal" id="serverIpCard">
+    <div class="server-ip-info">
+     <span class="server-ip-label">ZENTRAMC / SERVER IP</span>
+     <strong>zentramc.loca.lol</strong>
+    </div>
+
+    <button class="server-ip-copy" id="copyServerIp" type="button">
+     <span>COPY IP</span>
+     <b>↗</b>
+    </button>
+
+    <div class="server-ip-copied" id="serverIpCopied">COPIED ✓</div>
+   </div>
+
+  </section>
+
+
+  <!-- DISCORD -->
+  <section id="discord" class="section">
+
+   <div class="section-top reveal">
+    <div>
+     <div class="section-label">02 / DISCORD DEVELOPMENT</div>
+     <h2>Building Discord experiences.</h2>
+    </div>
+
+    <div class="section-number">DISCORD_02</div>
+   </div>
+
+   <div class="services discord-services">
+
+    <div class="service-card tilt reveal">
+     <span class="service-number">01</span>
+
+     <div class="service-symbol">⌘</div>
+
+     <h3>Discord Bot Development</h3>
+
+     <p>
+      I can build custom Discord bots for different use cases,
+      systems and communities, excluding illegal or harmful bots.
+     </p>
+
+     <div class="service-tags">
+      <span>CUSTOM BOTS</span>
+      <span>AUTOMATION</span>
+      <span>AI</span>
+     </div>
+    </div>
+
+
+    <div class="service-card tilt reveal">
+     <span class="service-number">02</span>
+
+     <div class="service-symbol">◆</div>
+
+     <h3>Discord Server Development</h3>
+
+     <p>
+      Server setup, channels, categories, roles, permissions,
+      tickets, bots and community systems.
+     </p>
+
+     <div class="service-tags">
+      <span>SETUP</span>
+      <span>ROLES</span>
+      <span>SYSTEMS</span>
+     </div>
+    </div>
+
+   </div>
+
+
+   <!-- ZENO -->
+   <div class="discord-feature reveal">
+
+    <div class="discord-feature-left">
+     <div class="feature-label">DISCORD BOT / AI</div>
+
+     <h3>Zeno</h3>
+
+     <p>
+      AI-powered Discord support bot developed for ZentraMC,
+      designed to answer server-related questions and assist the community.
+     </p>
+
+     <div class="mention">
+      <span>BOT</span>
+      <code>&lt;@1544796340909903972&gt;</code>
+     </div>
+    </div>
+
+    <div class="discord-feature-right">
+     <div class="feature-symbol-large">Z</div>
+    </div>
+
+   </div>
+
+
+   <a
+    class="discord-server-link reveal"
+    href="https://discord.gg/Q8cvUzamsQ"
+    target="_blank"
+    rel="noopener"
+   >
+    <div>
+     <span class="feature-label">DISCORD COMMUNITY</span>
+     <strong>View the server</strong>
+    </div>
+
+    <span class="feature-arrow">↗</span>
+   </a>
+
+  </section>
+
+
+  <!-- EDITING -->
+  <section id="editing" class="section editing-section">
+
+   <div class="section-top reveal">
+    <div>
+     <div class="section-label">03 / EDITING PROJECTS</div>
+     <h2>Visual work.</h2>
+    </div>
+
+    <div class="section-number">EDITING_03</div>
+   </div>
+
+   <div class="editing-intro reveal">
+    <p>
+     Gaming edits, visual experiments and other videos I've created.
+     New uploads can appear here automatically.
+    </p>
+
+    <a
+     href="https://youtube.com/@aevrnnvfx"
+     target="_blank"
+     rel="noopener"
+     class="btn btn-secondary magnetic"
+    >
+     YouTube Channel ↗
     </a>
-
-    <div class="nav-links">
-      <a href="#work">Minecraft</a>
-      <a href="#discord">Discord</a>
-      <a href="#editing">Editing</a>
-      <a href="#website-development">Website</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <div class="nav-status">
-      <span></span>
-      AVAILABLE
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-
-      <div class="hero-orbit orbit-1"></div>
-      <div class="hero-orbit orbit-2"></div>
-
-      <div class="hero-content">
-
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          DEVELOPER • EDITOR • CREATOR
-        </div>
-
-        <div class="hero-title-wrap">
-          <div class="hero-mini">I BUILD DIGITAL EXPERIENCES</div>
-
-          <h1>
-            Building
-            <span class="gradient-text">things</span>
-            <br>
-            that stand out.
-          </h1>
-        </div>
-
-        <p class="hero-description">
-          Minecraft systems, Discord servers, custom bots, plugins and
-          visual content, built with curiosity, creativity and constant experimentation.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#work" class="btn btn-primary magnetic">
-            <span>Explore my work</span>
-            <b>↗</b>
-          </a>
-
-          <a href="#contact" class="btn btn-secondary magnetic">
-            Let's talk
-          </a>
-        </div>
-
-        <div class="hero-meta">
-          <div>
-            <strong>03</strong>
-            <span>CRAFT AREAS</span>
-          </div>
-
-          <div>
-            <strong>∞</strong>
-            <span>IDEAS</span>
-          </div>
-
-          <div>
-            <strong>24/7</strong>
-            <span>BUILD MODE</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="scroll-indicator">
-        <span>SCROLL TO EXPLORE</span>
-        <i></i>
-      </div>
-
-    </section>
-
-
-    <!-- MINECRAFT -->
-    <section id="work" class="section">
-
-      <div class="section-top reveal">
-        <div>
-          <div class="section-label">01 / MINECRAFT DEVELOPMENT</div>
-          <h2>Building Minecraft systems.</h2>
-        </div>
-
-        <div class="section-number">MINECRAFT_01</div>
-      </div>
-
-      <div class="projects">
-
-        <article class="project-card tilt reveal">
-          <div class="card-glow"></div>
-
-          <div class="card-top">
-            <span>01</span>
-            <a class="arrow project-link" href="https://zentramc.vercel.app" target="_blank" rel="noopener">↗</a>
-          </div>
-
-          <div class="project-icon">Z</div>
-
-          <div class="card-content">
-            <div class="tag">MINECRAFT SERVER DEVELOPMENT</div>
-            <h3>ZentraMC</h3>
-            <p>
-              My Minecraft network project, built and developed around
-              gameplay systems, server configuration, custom features and player experience.
-            </p>
-          </div>
-
-          <div class="card-footer">
-            <span>LIVE SERVER</span>
-            <span>2026</span>
-          </div>
-        </article>
-
-
-        <article class="project-card tilt reveal">
-          <div class="card-glow"></div>
-
-          <div class="card-top">
-            <span>02</span>
-            <span class="arrow">↗</span>
-          </div>
-
-          <div class="project-icon">Z</div>
-
-          <div class="card-content">
-            <div class="tag">PLUGIN DEVELOPMENT</div>
-            <h3>Zentraduels</h3>
-            <p>
-              A custom Minecraft PvP plugin project with queue systems,
-              kits, arenas, countdowns and match flow.
-            </p>
-          </div>
-
-          <div class="card-footer">
-            <span>PAPER</span>
-            <span>JAVA</span>
-          </div>
-        </article>
-
-
-        <article class="project-card tilt reveal">
-          <div class="card-glow"></div>
-
-          <div class="card-top">
-            <span>03</span>
-            <span class="arrow">↗</span>
-          </div>
-
-          <div class="project-icon">H</div>
-
-          <div class="card-content">
-            <div class="tag">PLUGIN DEVELOPMENT</div>
-            <h3>ZentraHolograms</h3>
-            <p>
-              A Minecraft hologram plugin project created for displaying
-              custom information and server content.
-            </p>
-          </div>
-
-          <div class="card-footer">
-            <span>PAPER</span>
-            <span>JAVA</span>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="live-project reveal">
-        <span class="live-dot"></span>
-        <span>ZENTRAMC</span>
-        <span class="live-separator">/</span>
-        <span>LIVE SERVER</span>
-        <a href="https://zentramc.vercel.app" target="_blank" rel="noopener">OPEN SERVER ↗</a>
-      </div>
-
-      <!-- SERVER IP -->
-      <div class="server-ip-card reveal" id="serverIpCard">
-        <div class="server-ip-info">
-          <span class="server-ip-label">ZENTRAMC / SERVER IP</span>
-          <strong>zentramc.loca.lol</strong>
-        </div>
-
-        <button class="server-ip-copy" id="copyServerIp" type="button">
-          <span>COPY IP</span>
-          <b>↗</b>
-        </button>
-
-        <div class="server-ip-copied" id="serverIpCopied">COPIED ✓</div>
-      </div>
-
-    </section>
-
-
-    <!-- DISCORD -->
-    <section id="discord" class="section">
-
-      <div class="section-top reveal">
-        <div>
-          <div class="section-label">02 / DISCORD DEVELOPMENT</div>
-          <h2>Building Discord experiences.</h2>
-        </div>
-
-        <div class="section-number">DISCORD_02</div>
-      </div>
-
-      <div class="services discord-services">
-
-        <div class="service-card tilt reveal">
-          <span class="service-number">01</span>
-
-          <div class="service-symbol">⌘</div>
-
-          <h3>Discord Bot Development</h3>
-
-          <p>
-            I can build custom Discord bots for different use cases,
-            systems and communities, excluding illegal or harmful bots.
-          </p>
-
-          <div class="service-tags">
-            <span>CUSTOM BOTS</span>
-            <span>AUTOMATION</span>
-            <span>AI</span>
-          </div>
-        </div>
-
-
-        <div class="service-card tilt reveal">
-          <span class="service-number">02</span>
-
-          <div class="service-symbol">◆</div>
-
-          <h3>Discord Server Development</h3>
-
-          <p>
-            Server setup, channels, categories, roles, permissions,
-            tickets, bots and community systems.
-          </p>
-
-          <div class="service-tags">
-            <span>SETUP</span>
-            <span>ROLES</span>
-            <span>SYSTEMS</span>
-          </div>
-        </div>
-
-      </div>
-
-
-      <!-- ZENO -->
-      <div class="discord-feature reveal">
-
-        <div class="discord-feature-left">
-          <div class="feature-label">DISCORD BOT / AI</div>
-
-          <h3>Zeno</h3>
-
-          <p>
-            AI-powered Discord support bot developed for ZentraMC,
-            designed to answer server-related questions and assist the community.
-          </p>
-
-          <div class="mention">
-            <span>BOT</span>
-            <code>&lt;@1544796340909903972&gt;</code>
-          </div>
-        </div>
-
-        <div class="discord-feature-right">
-          <div class="feature-symbol-large">Z</div>
-        </div>
-
-      </div>
-
-
-      <a
-        class="discord-server-link reveal"
-        href="https://discord.gg/Q8cvUzamsQ"
-        target="_blank"
-        rel="noopener"
-      >
-        <div>
-          <span class="feature-label">DISCORD COMMUNITY</span>
-          <strong>View the server</strong>
-        </div>
-
-        <span class="feature-arrow">↗</span>
-      </a>
-
-    </section>
-
-
-    <!-- EDITING -->
-    <section id="editing" class="section editing-section">
-
-      <div class="section-top reveal">
-        <div>
-          <div class="section-label">03 / EDITING PROJECTS</div>
-          <h2>Visual work.</h2>
-        </div>
-
-        <div class="section-number">EDITING_03</div>
-      </div>
-
-      <div class="editing-intro reveal">
-        <p>
-          Gaming edits, visual experiments and other videos I've created.
-          New uploads can appear here automatically.
-        </p>
-
-        <a
-          href="https://youtube.com/@aevrnnvfx"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-secondary magnetic"
-        >
-          YouTube Channel ↗
-        </a>
-      </div>
-
-      <div class="creator-channels">
-  <div class="creator-card">
-    <div class="creator-icon">▶</div>
-    <div>
-      <span class="creator-type">CONTENT / GAMING</span>
-      <h3>AEVYRRR</h3>
-      <p>Gaming videos, Shorts & content creation.</p>
-    </div>
-    <a href="https://www.youtube.com/@Aevyrrr" target="_blank">VIEW CHANNEL ↗</a>
+   </div>
+
+   <div class="creator-channels">
+ <div class="creator-card">
+  <div class="creator-icon">▶</div>
+  <div>
+   <span class="creator-type">CONTENT / GAMING</span>
+   <h3>AEVYRRR</h3>
+   <p>Gaming videos, Shorts & content creation.</p>
   </div>
+  <a href="https://www.youtube.com/@Aevyrrr" target="_blank">VIEW CHANNEL ↗</a>
+ </div>
 
-  <div class="creator-card">
-    <div class="creator-icon">▶</div>
-    <div>
-      <span class="creator-type">LONG-FORM GAMING</span>
-      <h3>PAULHUYAWR</h3>
-      <p>Long-form gaming content and videos.</p>
-    </div>
-    <a href="https://www.youtube.com/@Paulhuyawr" target="_blank">VIEW CHANNEL ↗</a>
+ <div class="creator-card">
+  <div class="creator-icon">▶</div>
+  <div>
+   <span class="creator-type">LONG-FORM GAMING</span>
+   <h3>PAULHUYAWR</h3>
+   <p>Long-form gaming content and videos.</p>
   </div>
+  <a href="https://www.youtube.com/@Paulhuyawr" target="_blank">VIEW CHANNEL ↗</a>
+ </div>
 
-  <div class="creator-card">
-    <div class="creator-icon">▶</div>
-    <div>
-      <span class="creator-type">EDITING / VISUALS</span>
-      <h3>AEVRNNVFX</h3>
-      <p>Edits, visual projects and motion work.</p>
-    </div>
-    <a href="https://www.youtube.com/@aevrnnvfx" target="_blank">VIEW CHANNEL ↗</a>
+ <div class="creator-card">
+  <div class="creator-icon">▶</div>
+  <div>
+   <span class="creator-type">EDITING / VISUALS</span>
+   <h3>AEVRNNVFX</h3>
+   <p>Edits, visual projects and motion work.</p>
   </div>
+  <a href="https://www.youtube.com/@aevrnnvfx" target="_blank">VIEW CHANNEL ↗</a>
+ </div>
 </div>
 
 <div class="youtube-grid" id="youtubeProjects">
 
-        <div class="youtube-loading">
-          <div class="loader-ring"></div>
-          <span>LOADING LATEST PROJECTS</span>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-    <section class="section website-development-section" id="website-development">
-
-  <div class="section-label reveal">04 / WEBSITE DESIGN & DEVELOPMENT</div>
-
-  <div class="webx-heading reveal">
-    <div>
-      <span class="webx-kicker">DIGITAL / CREATIVE / CODE</span>
-      <h2>Digital experiences,<br><span>built from scratch.</span></h2>
+    <div class="youtube-loading">
+     <div class="loader-ring"></div>
+     <span>LOADING LATEST PROJECTS</span>
     </div>
 
-    <p>
-      Modern websites designed around clean visuals, smooth interactions
-      and a premium user experience.
-    </p>
+   </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+  <section class="section website-development-section" id="website-development">
+
+ <div class="section-label reveal">04 / WEBSITE DESIGN & DEVELOPMENT</div>
+
+ <div class="webx-heading reveal">
+  <div>
+   <span class="webx-kicker">DIGITAL / CREATIVE / CODE</span>
+   <h2>Digital experiences,<br><span>built from scratch.</span></h2>
   </div>
 
-  <div class="webx-showcase reveal">
+  <p>
+   Modern websites designed around clean visuals, smooth interactions
+   and a premium user experience.
+  </p>
+ </div>
 
-    <div class="webx-glow"></div>
+ <div class="webx-showcase reveal">
 
-    <div class="webx-browser">
+  <div class="webx-glow"></div>
 
-      <div class="webx-browser-top">
-        <div class="webx-dots">
-          <i></i><i></i><i></i>
-        </div>
+  <div class="webx-browser">
 
-        <div class="webx-address">
-          <span>⌁</span>
-          aevrnn.dev
-        </div>
-
-        <div class="webx-status">
-          <span></span> LIVE
-        </div>
-      </div>
-
-      <div class="webx-screen">
-
-        <div class="webx-screen-grid"></div>
-
-        <div class="webx-screen-content">
-          <span>AEVRNN / DIGITAL CREATOR</span>
-
-          <strong>
-            BUILD.<br>
-            CREATE.<br>
-            <em>REPEAT.</em>
-          </strong>
-
-          <small>
-            Websites • Interfaces • Digital Experiences
-          </small>
-        </div>
-
-        <div class="webx-floating-card webx-float-one">
-          <b>01</b>
-          <span>DESIGN</span>
-        </div>
-
-        <div class="webx-floating-card webx-float-two">
-          <b>JS</b>
-          <span>INTERACTIVE</span>
-        </div>
-
-      </div>
-
-      <div class="webx-browser-bottom">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JAVASCRIPT</span>
-        <span>RESPONSIVE</span>
-      </div>
-
+   <div class="webx-browser-top">
+    <div class="webx-dots">
+     <i></i><i></i><i></i>
     </div>
 
-  </div>
+    <div class="webx-address">
+     <span>⌁</span>
+     aevrnn.dev
+    </div>
 
+    <div class="webx-status">
+     <span></span> LIVE
+    </div>
+   </div>
 
-  <div class="webx-cards">
+   <div class="webx-screen">
 
-    <article class="webx-card webx-card-main reveal tilt-card">
+    <div class="webx-screen-grid"></div>
 
-      <div class="webx-card-top">
-        <span class="webx-number">01</span>
-        <span class="webx-live">CURRENT PROJECT</span>
-      </div>
+    <div class="webx-screen-content">
+     <span>AEVRNN / DIGITAL CREATOR</span>
 
-      <div class="webx-icon">✦</div>
+     <strong>
+      BUILD.<br>
+      CREATE.<br>
+      <em>REPEAT.</em>
+     </strong>
 
-      <h3>AEVRNN Portfolio</h3>
+     <small>
+      Websites • Interfaces • Digital Experiences
+     </small>
+    </div>
 
-      <p>
-        Designed and developed from scratch — from the interface,
-        animations and visual system to the responsive experience.
-      </p>
+    <div class="webx-floating-card webx-float-one">
+     <b>01</b>
+     <span>DESIGN</span>
+    </div>
 
-      <div class="webx-stack">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Responsive UI</span>
-      </div>
+    <div class="webx-floating-card webx-float-two">
+     <b>JS</b>
+     <span>INTERACTIVE</span>
+    </div>
 
-      <div class="webx-card-line"></div>
+   </div>
 
-      <div class="webx-card-footer">
-        <span>BUILT BY AEVRNN</span>
-        <span>↗</span>
-      </div>
-
-    </article>
-
-
-    <article class="webx-card reveal tilt-card">
-
-      <div class="webx-card-top">
-        <span class="webx-number">02</span>
-        <span class="webx-mini">DESIGN</span>
-      </div>
-
-      <div class="webx-big-number">UI</div>
-
-      <h3>Modern UI Design</h3>
-
-      <p>
-        Futuristic interfaces with cinematic motion, glowing effects,
-        glass surfaces and responsive layouts.
-      </p>
-
-      <div class="webx-progress">
-        <span></span>
-      </div>
-
-      <small>VISUAL SYSTEM / 01</small>
-
-    </article>
-
-
-    <article class="webx-card reveal tilt-card">
-
-      <div class="webx-card-top">
-        <span class="webx-number">03</span>
-        <span class="webx-mini">DEVELOPMENT</span>
-      </div>
-
-      <div class="webx-code-art">
-        <span>&lt;</span>
-        <b>/</b>
-        <span>&gt;</span>
-      </div>
-
-      <h3>Frontend Development</h3>
-
-      <p>
-        Lightweight and maintainable websites built with modern
-        frontend technologies and smooth interactions.
-      </p>
-
-      <div class="webx-tech-line">
-        <span>HTML</span>
-        <i></i>
-        <span>CSS</span>
-        <i></i>
-        <span>JS</span>
-      </div>
-
-    </article>
+   <div class="webx-browser-bottom">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JAVASCRIPT</span>
+    <span>RESPONSIVE</span>
+   </div>
 
   </div>
+
+ </div>
+
+
+ <div class="webx-cards">
+
+  <article class="webx-card webx-card-main reveal tilt-card">
+
+   <div class="webx-card-top">
+    <span class="webx-number">01</span>
+    <span class="webx-live">CURRENT PROJECT</span>
+   </div>
+
+   <div class="webx-icon">✦</div>
+
+   <h3>AEVRNN Portfolio</h3>
+
+   <p>
+    Designed and developed from scratch from the interface,
+    animations and visual system to the responsive experience.
+   </p>
+
+   <div class="webx-stack">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Responsive UI</span>
+   </div>
+
+   <div class="webx-card-line"></div>
+
+   <div class="webx-card-footer">
+    <span>BUILT BY AEVRNN</span>
+    <span>↗</span>
+   </div>
+
+  </article>
+
+
+  <article class="webx-card reveal tilt-card">
+
+   <div class="webx-card-top">
+    <span class="webx-number">02</span>
+    <span class="webx-mini">DESIGN</span>
+   </div>
+
+   <div class="webx-big-number">UI</div>
+
+   <h3>Modern UI Design</h3>
+
+   <p>
+    Futuristic interfaces with cinematic motion, glowing effects,
+    glass surfaces and responsive layouts.
+   </p>
+
+   <div class="webx-progress">
+    <span></span>
+   </div>
+
+   <small>VISUAL SYSTEM / 01</small>
+
+  </article>
+
+
+  <article class="webx-card reveal tilt-card">
+
+   <div class="webx-card-top">
+    <span class="webx-number">03</span>
+    <span class="webx-mini">DEVELOPMENT</span>
+   </div>
+
+   <div class="webx-code-art">
+    <span>&lt;</span>
+    <b>/</b>
+    <span>&gt;</span>
+   </div>
+
+   <h3>Frontend Development</h3>
+
+   <p>
+    Lightweight and maintainable websites built with modern
+    frontend technologies and smooth interactions.
+   </p>
+
+   <div class="webx-tech-line">
+    <span>HTML</span>
+    <i></i>
+    <span>CSS</span>
+    <i></i>
+    <span>JS</span>
+   </div>
+
+  </article>
+
+ </div>
 
 </section>
 
 <section id="skills" class="section">
 
-      <div class="section-top reveal">
-        <div>
-          <div class="section-label">05 / SKILLS</div>
-          <h2>Still learning. Still building.</h2>
-        </div>
-
-        <div class="section-number">SKILLS_04</div>
-      </div>
-
-      <div class="skills-grid reveal">
-
-        <div class="skill-item">
-          <span>01</span>
-          <strong>Minecraft Development</strong>
-          <small>SERVER / PLUGINS</small>
-        </div>
-
-        <div class="skill-item">
-          <span>02</span>
-          <strong>Plugin Development</strong>
-          <small>BEGINNER</small>
-        </div>
-
-        <div class="skill-item">
-          <span>03</span>
-          <strong>Discord Development</strong>
-          <small>BOTS / SERVERS</small>
-        </div>
-
-        <div class="skill-item">
-          <span>04</span>
-          <strong>Video Editing</strong>
-          <small>GAMING / SOCIAL</small>
-        </div>
-
-        <div class="skill-item">
-          <span>05</span>
-          <strong>Website Design & Development</strong>
-          <small>HTML / CSS / JAVASCRIPT</small>
-        </div>
-
-      </div>
-
-      <div class="about-stack skills-stack reveal">
-        <span>JAVA</span>
-        <span>JAVASCRIPT</span>
-        <span>MINECRAFT</span>
-        <span>DISCORD</span>
-        <span>AI</span>
-        <span>VIDEO EDITING</span>
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about" class="section about-section">
-
-      <div class="section-label reveal">06 / ABOUT AEVRNN</div>
-
-      <div class="about-grid">
-
-        <div class="about-title reveal">
-          <div class="about-eyebrow">AURITRA PAUL / AEVRNN</div>
-
-          <h2>
-            Curious by
-            <span class="gradient-text">default.</span>
-          </h2>
-
-          <div class="about-role">
-            DEVELOPER <span>•</span> EDITOR <span>•</span> CREATOR
-          </div>
-        </div>
-
-        <div class="about-text reveal">
-
-          <p class="about-intro">
-            I'm <strong>Auritra Paul</strong>, but online you'll probably know me as
-            <strong>AEVRNN</strong>. I'm into Minecraft development, Discord,
-            websites, video editing and pretty much anything I can build or
-            mess around with.
-          </p>
-
-          <p>
-            I make Minecraft plugins and server systems, build Discord bots,
-            design websites and work on random ideas whenever something
-            interesting pops into my head. I also mess around with AI and
-            other stuff just to see what I can make.
-          </p>
-
-          <p>
-            I build Minecraft plugins and server systems, create Discord bots
-            and communities, design responsive websites and experiment with
-            new creative projects.
-          </p>
-
-          <p>
-            I'm constantly learning, building and improving through every
-            project — one idea at a time.
-          </p>
-
-          <div class="about-line"></div>
-
-          <div class="about-facts">
-
-            <div class="about-fact">
-              <span>NAME</span>
-              <strong>Auritra Paul</strong>
-            </div>
-
-            <div class="about-fact">
-              <span>KNOWN AS</span>
-              <strong>AEVRNN</strong>
-            </div>
-
-            <div class="about-fact">
-              <span>CRAFT</span>
-              <strong>Minecraft / Discord / Web / Video</strong>
-            </div>
-
-            <div class="about-fact">
-              <span>STATUS</span>
-              <strong>Learning • Building • Experimenting</strong>
-            </div>
-
-          </div>
-
-          <div class="about-stack">
-            <span>MINECRAFT</span>
-            <span>JAVA</span>
-            <span>DISCORD</span>
-            <span>JAVASCRIPT</span>
-            <span>AI</span>
-            <span>VIDEO</span>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
-
-      <div class="contact-box reveal">
-
-        <div class="contact-orb"></div>
-
-        <div class="section-label">07 / CONTACT</div>
-
-        <h2>
-          Have an idea?
-          <span class="gradient-text">Let's build it.</span>
-        </h2>
-
-        <p>
-          Want to discuss a Minecraft project, Discord system,
-          bot or editing work? Reach out.
-        </p>
-
-        <div class="contact-buttons">
-
-          <button
-            type="button"
-            class="btn btn-primary magnetic"
-            id="openContactForm"
-          >
-            Contact me <b>↗</b>
-          </button>
-
-          <a
-            href="https://discord.com/users/1123668181534384229"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-secondary magnetic"
-          >
-            Discord <b>↗</b>
-          </a>
-
-        </div>
-
-
-        <div class="social-links">
-
-          <a
-            href="https://www.instagram.com/stfupaul_"
-            target="_blank"
-            rel="noopener"
-          >
-            INSTAGRAM ↗
-          </a>
-
-          <a
-            href="https://youtube.com/@aevrnnvfx"
-            target="_blank"
-            rel="noopener"
-          >
-            YOUTUBE ↗
-          </a>
-
-          <a
-            href="https://discord.gg/Q8cvUzamsQ"
-            target="_blank"
-            rel="noopener"
-          >
-            DISCORD SERVER ↗
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-
-    <div class="footer-logo">
-      AEVRNN<span>.</span>
+   <div class="section-top reveal">
+    <div>
+     <div class="section-label">05 / SKILLS</div>
+     <h2>Still learning. Still building.</h2>
     </div>
 
-    <p>BUILD • EDIT • CREATE</p>
+    <div class="section-number">SKILLS_04</div>
+   </div>
 
-    <small>
-      © <span id="year"></span> AEVRNN. All rights reserved.
-    </small>
+   <div class="skills-grid reveal">
 
-  </footer>
+    <div class="skill-item">
+     <span>01</span>
+     <strong>Minecraft Development</strong>
+     <small>SERVER / PLUGINS</small>
+    </div>
+
+    <div class="skill-item">
+     <span>02</span>
+     <strong>Plugin Development</strong>
+     <small>BEGINNER</small>
+    </div>
+
+    <div class="skill-item">
+     <span>03</span>
+     <strong>Discord Development</strong>
+     <small>BOTS / SERVERS</small>
+    </div>
+
+    <div class="skill-item">
+     <span>04</span>
+     <strong>Video Editing</strong>
+     <small>GAMING / SOCIAL</small>
+    </div>
+
+    <div class="skill-item">
+     <span>05</span>
+     <strong>Website Design & Development</strong>
+     <small>HTML / CSS / JAVASCRIPT</small>
+    </div>
+
+   </div>
+
+   <div class="about-stack skills-stack reveal">
+    <span>JAVA</span>
+    <span>JAVASCRIPT</span>
+    <span>MINECRAFT</span>
+    <span>DISCORD</span>
+    <span>AI</span>
+    <span>VIDEO EDITING</span>
+   </div>
+
+  </section>
 
 
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
 
-  <!-- CONTACT MODAL -->
-  <div class="contact-modal" id="contactModal" aria-hidden="true">
-    <div class="contact-modal-backdrop" id="contactBackdrop"></div>
+   <div class="section-label reveal">06 / ABOUT AEVRNN</div>
 
-    <div class="contact-modal-box" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+   <div class="about-grid">
 
-      <button class="contact-close" id="closeContactForm" type="button" aria-label="Close">
-        ×
-      </button>
+    <div class="about-title reveal">
+     <div class="about-eyebrow">AURITRA PAUL / AEVRNN</div>
 
-      <div class="contact-modal-glow"></div>
+     <h2>
+      Curious by
+      <span class="gradient-text">default.</span>
+     </h2>
 
-      <div class="contact-modal-header">
-        <span class="contact-modal-label">AEVRNN / CONTACT</span>
-        <h2 id="contactModalTitle">
-          Let's build
-          <span>something.</span>
-        </h2>
-        <p>
-          Tell me what you're working on and I'll get back to you.
-        </p>
+     <div class="about-role">
+      DEVELOPER <span>•</span> EDITOR <span>•</span> CREATOR
+     </div>
+    </div>
+
+    <div class="about-text reveal">
+
+     <p class="about-intro">
+      I'm <strong>Auritra Paul</strong>, but online you'll probably know me as
+      <strong>AEVRNN</strong>. I'm into Minecraft development, Discord,
+      websites, video editing and pretty much anything I can build or
+      mess around with.
+     </p>
+
+     <p>
+      I make Minecraft plugins and server systems, build Discord bots,
+      design websites and work on random ideas whenever something
+      interesting pops into my head. I also mess around with AI and
+      other stuff just to see what I can make.
+     </p>
+
+     <p>
+      I build Minecraft plugins and server systems, create Discord bots
+      and communities, design responsive websites and experiment with
+      new creative projects.
+     </p>
+
+     <p>
+      I'm constantly learning, building and improving through every
+      project one idea at a time.
+     </p>
+
+     <div class="about-line"></div>
+
+     <div class="about-facts">
+
+      <div class="about-fact">
+       <span>NAME</span>
+       <strong>Auritra Paul</strong>
       </div>
 
-      <form class="contact-form" id="contactForm">
-
-        <div class="contact-field">
-          <label for="contactName">YOUR NAME</label>
-          <input
-            type="text"
-            id="contactName"
-            name="name"
-            placeholder="Enter your name"
-            autocomplete="name"
-            required
-          >
-        </div>
-
-        <div class="contact-field">
-          <label for="contactEmail">EMAIL ADDRESS</label>
-          <input
-            type="email"
-            id="contactEmail"
-            name="email"
-            placeholder="you@example.com"
-            autocomplete="email"
-            required
-          >
-        </div>
-
-        <div class="contact-field">
-          <label for="contactMessage">MESSAGE</label>
-          <textarea
-            id="contactMessage"
-            name="message"
-            rows="5"
-            placeholder="Tell me about your project..."
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="contact-submit">
-          <span>SEND MESSAGE</span>
-          <b>↗</b>
-        </button>
-
-        <div class="contact-form-status" id="contactFormStatus"></div>
-
-      </form>
-
-      <div class="contact-modal-footer">
-        <span>REPLY VIA EMAIL</span>
-        <span>aevyrr@gmail.com</span>
+      <div class="about-fact">
+       <span>KNOWN AS</span>
+       <strong>AEVRNN</strong>
       </div>
+
+      <div class="about-fact">
+       <span>CRAFT</span>
+       <strong>Minecraft / Discord / Web / Video</strong>
+      </div>
+
+      <div class="about-fact">
+       <span>STATUS</span>
+       <strong>Learning • Building • Experimenting</strong>
+      </div>
+
+     </div>
+
+     <div class="about-stack">
+      <span>MINECRAFT</span>
+      <span>JAVA</span>
+      <span>DISCORD</span>
+      <span>JAVASCRIPT</span>
+      <span>AI</span>
+      <span>VIDEO</span>
+     </div>
 
     </div>
+
+   </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+
+   <div class="contact-box reveal">
+
+    <div class="contact-orb"></div>
+
+    <div class="section-label">07 / CONTACT</div>
+
+    <h2>
+     Have an idea?
+     <span class="gradient-text">Let's build it.</span>
+    </h2>
+
+    <p>
+     Want to discuss a Minecraft project, Discord system,
+     bot or editing work? Reach out.
+    </p>
+
+    <div class="contact-buttons">
+
+     <button
+      type="button"
+      class="btn btn-primary magnetic"
+      id="openContactForm"
+     >
+      Contact me <b>↗</b>
+     </button>
+
+     <a
+      href="https://discord.com/users/1123668181534384229"
+      target="_blank"
+      rel="noopener"
+      class="btn btn-secondary magnetic"
+     >
+      Discord <b>↗</b>
+     </a>
+
+    </div>
+
+
+    <div class="social-links">
+
+     <a
+      href="https://www.instagram.com/stfupaul_"
+      target="_blank"
+      rel="noopener"
+     >
+      INSTAGRAM ↗
+     </a>
+
+     <a
+      href="https://youtube.com/@aevrnnvfx"
+      target="_blank"
+      rel="noopener"
+     >
+      YOUTUBE ↗
+     </a>
+
+     <a
+      href="https://discord.gg/Q8cvUzamsQ"
+      target="_blank"
+      rel="noopener"
+     >
+      DISCORD SERVER ↗
+     </a>
+
+    </div>
+
+   </div>
+
+  </section>
+
+ </main>
+
+
+ <footer>
+
+  <div class="footer-logo">
+   AEVRNN<span>.</span>
   </div>
 
-  <script src="script.js"></script>
+  <p>BUILD • EDIT • CREATE</p>
+
+  <small>
+   © <span id="year"></span> AEVRNN. All rights reserved.
+  </small>
+
+ </footer>
+
+
+
+ <!-- CONTACT MODAL -->
+ <div class="contact-modal" id="contactModal" aria-hidden="true">
+  <div class="contact-modal-backdrop" id="contactBackdrop"></div>
+
+  <div class="contact-modal-box" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+
+   <button class="contact-close" id="closeContactForm" type="button" aria-label="Close">
+    ×
+   </button>
+
+   <div class="contact-modal-glow"></div>
+
+   <div class="contact-modal-header">
+    <span class="contact-modal-label">AEVRNN / CONTACT</span>
+    <h2 id="contactModalTitle">
+     Let's build
+     <span>something.</span>
+    </h2>
+    <p>
+     Tell me what you're working on and I'll get back to you.
+    </p>
+   </div>
+
+   <form class="contact-form" id="contactForm">
+
+    <div class="contact-field">
+     <label for="contactName">YOUR NAME</label>
+     <input
+      type="text"
+      id="contactName"
+      name="name"
+      placeholder="Enter your name"
+      autocomplete="name"
+      required
+     >
+    </div>
+
+    <div class="contact-field">
+     <label for="contactEmail">EMAIL ADDRESS</label>
+     <input
+      type="email"
+      id="contactEmail"
+      name="email"
+      placeholder="you@example.com"
+      autocomplete="email"
+      required
+     >
+    </div>
+
+    <div class="contact-field">
+     <label for="contactMessage">MESSAGE</label>
+     <textarea
+      id="contactMessage"
+      name="message"
+      rows="5"
+      placeholder="Tell me about your project..."
+      required
+     ></textarea>
+    </div>
+
+    <button type="submit" class="contact-submit">
+     <span>SEND MESSAGE</span>
+     <b>↗</b>
+    </button>
+
+    <div class="contact-form-status" id="contactFormStatus"></div>
+
+   </form>
+
+   <div class="contact-modal-footer">
+    <span>REPLY VIA EMAIL</span>
+    <span>aevyrr@gmail.com</span>
+   </div>
+
+  </div>
+ </div>
+
+ <script src="script.js"></script>
 
 
 <script>
 (() => {
-  const audio = document.getElementById("aevrnn-music");
-  if (!audio) {
-    console.warn("AEVRNN: music element not found");
-    return;
+ const audio = document.getElementById("aevrnn-music");
+ if (!audio) {
+  console.warn("AEVRNN: music element not found");
+  return;
+ }
+
+ audio.loop = true;
+ audio.preload = "auto";
+ audio.volume = 0.3;
+
+ const startMusic = () => {
+  audio.muted = false;
+  audio.play().then(() => {
+   console.log("AEVRNN: Attention.mp3 started");
+  }).catch(err => {
+   console.warn("AEVRNN: music play blocked:", err);
+  });
+ };
+
+ document.addEventListener("click", (e) => {
+  const el = e.target.closest("button, a, [role='button'], .tap-to-enter, .enter-button");
+  if (!el) return;
+
+  const text = (el.textContent || "").trim().toLowerCase();
+
+  if (
+   text.includes("tap to enter") ||
+   text.includes("enter") ||
+   el.classList.contains("tap-to-enter") ||
+   el.classList.contains("enter-button")
+  ) {
+   startMusic();
   }
-
-  audio.loop = true;
-  audio.preload = "auto";
-  audio.volume = 0.3;
-
-  const startMusic = () => {
-    audio.muted = false;
-    audio.play().then(() => {
-      console.log("AEVRNN: Attention.mp3 started");
-    }).catch(err => {
-      console.warn("AEVRNN: music play blocked:", err);
-    });
-  };
-
-  document.addEventListener("click", (e) => {
-    const el = e.target.closest("button, a, [role='button'], .tap-to-enter, .enter-button");
-    if (!el) return;
-
-    const text = (el.textContent || "").trim().toLowerCase();
-
-    if (
-      text.includes("tap to enter") ||
-      text.includes("enter") ||
-      el.classList.contains("tap-to-enter") ||
-      el.classList.contains("enter-button")
-    ) {
-      startMusic();
-    }
-  }, true);
+ }, true);
 })();
 </script>
 
