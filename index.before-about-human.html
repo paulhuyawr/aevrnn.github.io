@@ -15,199 +15,6 @@
 </head>
 
 <body>
-<style>
-#aevrnn-cinematic-intro{
-  position:fixed;
-  inset:0;
-  z-index:999999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background:#030006;
-  color:#fff;
-  font-family:Inter,system-ui,sans-serif;
-  transition:opacity 1.2s cubic-bezier(.77,0,.18,1),transform 1.2s cubic-bezier(.77,0,.18,1);
-}
-#aevrnn-cinematic-intro.hide{
-  opacity:0;
-  transform:scale(1.08);
-  pointer-events:none;
-}
-.aevrnn-bg{
-  position:absolute;
-  inset:-20%;
-  background:
-    radial-gradient(circle at 50% 45%,rgba(168,0,255,.25),transparent 25%),
-    radial-gradient(circle at 20% 80%,rgba(255,80,180,.12),transparent 30%),
-    radial-gradient(circle at 80% 20%,rgba(90,0,255,.13),transparent 30%);
-  filter:blur(35px);
-  animation:aevrnnFloat 7s ease-in-out infinite alternate;
-}
-.aevrnn-grid{
-  position:absolute;
-  inset:0;
-  opacity:.12;
-  background-image:
-    linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);
-  background-size:55px 55px;
-  mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);
-  animation:aevrnnGrid 12s linear infinite;
-}
-.aevrnn-content{
-  position:relative;
-  z-index:3;
-  text-align:center;
-}
-.aevrnn-small{
-  font-size:11px;
-  letter-spacing:7px;
-  text-transform:uppercase;
-  opacity:.55;
-  margin-bottom:22px;
-}
-.aevrnn-title{
-  margin:0;
-  font-size:clamp(58px,15vw,150px);
-  font-weight:900;
-  letter-spacing:-7px;
-  line-height:.85;
-  background:linear-gradient(110deg,#fff,#d7a5ff 45%,#ff7399);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  text-shadow:0 0 50px rgba(190,0,255,.25);
-  animation:aevrnnTitle 2.5s cubic-bezier(.2,.8,.2,1) both;
-}
-.aevrnn-sub{
-  margin-top:25px;
-  font-size:13px;
-  letter-spacing:5px;
-  text-transform:uppercase;
-  opacity:.45;
-}
-#aevrnn-enter{
-  margin-top:42px;
-  padding:15px 34px;
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:999px;
-  background:rgba(255,255,255,.045);
-  color:#fff;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:4px;
-  cursor:pointer;
-  backdrop-filter:blur(15px);
-  box-shadow:0 0 0 rgba(190,0,255,0);
-  transition:.35s ease;
-  animation:aevrnnButton 2s ease-in-out infinite;
-}
-#aevrnn-enter:hover{
-  transform:translateY(-3px) scale(1.04);
-  border-color:rgba(255,255,255,.7);
-  box-shadow:0 0 45px rgba(190,0,255,.4);
-  background:rgba(255,255,255,.09);
-}
-.aevrnn-line{
-  position:absolute;
-  width:140vw;
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
-  transform:rotate(-18deg);
-  opacity:.2;
-  animation:aevrnnLine 5s linear infinite;
-}
-.aevrnn-flash{
-  position:absolute;
-  inset:0;
-  background:#fff;
-  opacity:0;
-  pointer-events:none;
-}
-#aevrnn-cinematic-intro.entering .aevrnn-flash{
-  animation:aevrnnFlash .8s ease forwards;
-}
-@keyframes aevrnnFloat{
-  from{transform:translate3d(-2%,-2%,0) scale(1)}
-  to{transform:translate3d(2%,2%,0) scale(1.08)}
-}
-@keyframes aevrnnGrid{
-  from{transform:translateY(0)}
-  to{transform:translateY(55px)}
-}
-@keyframes aevrnnTitle{
-  from{opacity:0;transform:translateY(35px) scale(.92);filter:blur(15px)}
-  to{opacity:1;transform:none;filter:blur(0)}
-}
-@keyframes aevrnnButton{
-  0%,100%{box-shadow:0 0 0 rgba(190,0,255,0)}
-  50%{box-shadow:0 0 28px rgba(190,0,255,.18)}
-}
-@keyframes aevrnnLine{
-  from{left:-80%;top:20%}
-  to{left:100%;top:80%}
-}
-@keyframes aevrnnFlash{
-  0%{opacity:0}
-  35%{opacity:.8}
-  100%{opacity:0}
-}
-@media(max-width:600px){
-  .aevrnn-title{letter-spacing:-4px}
-  .aevrnn-small{letter-spacing:4px}
-}
-</style>
-
-<div id="aevrnn-cinematic-intro">
-  <div class="aevrnn-bg"></div>
-  <div class="aevrnn-grid"></div>
-  <div class="aevrnn-line"></div>
-
-  <div class="aevrnn-content">
-    <div class="aevrnn-small">WELCOME TO</div>
-    <h1 class="aevrnn-title">AEVRNN</h1>
-    <div class="aevrnn-sub">CREATIVE DEVELOPER • DESIGNER</div>
-    <button id="aevrnn-enter">TAP TO ENTER</button>
-  </div>
-
-  <div class="aevrnn-flash"></div>
-</div>
-
-<audio id="aevrnn-music" src="/Attention.mp3" loop preload="auto"></audio>
-
-<script>
-(function(){
-  const intro=document.getElementById("aevrnn-cinematic-intro");
-  const btn=document.getElementById("aevrnn-enter");
-  const music=document.getElementById("aevrnn-music");
-
-  btn.addEventListener("click",async()=>{
-    try{
-      music.volume=0;
-      await music.play();
-
-      let v=0;
-      const fade=setInterval(()=>{
-        v=Math.min(1,v+.05);
-        music.volume=v;
-        if(v>=1) clearInterval(fade);
-      },35);
-    }catch(e){}
-
-    intro.classList.add("entering");
-
-    setTimeout(()=>{
-      intro.classList.add("hide");
-      document.body.style.overflow="";
-      setTimeout(()=>intro.remove(),1300);
-    },500);
-  });
-
-  document.body.style.overflow="hidden";
-})();
-</script>
-
 
   <!-- INTRO -->
   <div class="intro" id="intro">
@@ -873,17 +680,16 @@
         <div class="about-text reveal">
 
           <p class="about-intro">
-            I'm <strong>Auritra Paul</strong>, but online you'll probably know me as
-            <strong>AEVRNN</strong>. I'm into Minecraft development, Discord,
-            websites, video editing and pretty much anything I can build or
-            mess around with.
+            I'm <strong>Auritra Paul</strong>, also known online as
+            <strong>AEVRNN</strong> — a developer, video editor and creator
+            who enjoys turning ideas into real digital experiences.
           </p>
 
           <p>
-            I make Minecraft plugins and server systems, build Discord bots,
-            design websites and work on random ideas whenever something
-            interesting pops into my head. I also mess around with AI and
-            other stuff just to see what I can make.
+            My work mainly revolves around <strong>Minecraft development</strong>,
+            <strong>Discord systems</strong>, <strong>website design & development</strong>,
+            <strong>JavaScript</strong>, <strong>AI projects</strong> and
+            <strong>video editing</strong>.
           </p>
 
           <p>
